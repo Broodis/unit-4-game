@@ -1,0 +1,36 @@
+.top { 
+    background-color: #654456;
+    color: white;
+    padding: 2%;
+}
+
+.character-row {
+    padding: 2%;
+    background-color: #654456;
+}
+
+.card {
+    text-align: center; 
+    align-items: center;
+}
+
+.card:hover {
+    box-shadow: 0 2px;
+    top: 2px;
+}
+
+.card:active {
+    box-shadow: 0 0;
+    top: 4px;
+}
+
+.character-pic {
+    width: 35%;
+    height: auto;
+}
+
+.char-text-row {
+    padding: 2%;
+    background-color: #578395;
+    text-align: center;
+}
