@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
 </head>
 <body>
-<!-- Jumbotron (Top) -->
+    <!-- Jumbotron (Top) -->
     <div class="jumbotron-fluid top">
         <div class="container">
             <div class="row text-center">
@@ -21,41 +21,83 @@
         </div>
     </div>
 
-<!-- Character Selection -->
-    <div class="container-fluid">
+    <!-- Character Selection -->
+    <div class="container-fluid charContainer">
         <div class="row char-text-row">
             <div class="col-12">
                 <h2>Choose one of the characters below to get started!</h2>
             </div>
         </div>
         <div class="row character-row">
+            <!-- Chewbacca -->
             <div class="col-sm-12 col-md-6 col-xl-3">
-                <div class="card card-1 my-3">
+                <div type="button" class="card char1 my-3">
+                    <h3>Chewbacca</h3>
                     <img class="character-pic" src="assets/images/image1.png"/>
-                    <h2>Chewbacca</h2>
+                    <h4>180</h4>
                 </div>
             </div>
+            <!-- Mace Windu -->
             <div class="col-sm-12 col-md-6 col-xl-3">
-                <div class="card card-2 my-3">
+                <div type="button" class="card char2 my-3">
+                    <h3>Mace Windu</h3>
                     <img class="character-pic" src="assets/images/image2.png"/>
-                    <h2>Mace Windu</h2>
+                    <h4>140</h4>
                 </div>
             </div>
+            <!-- Storm Trooper -->
             <div class="col-sm-12 col-md-6 col-xl-3">
-                <div class="card card-2 my-3">
+                <div type="button" class="card char3 my-3">
+                    <h3>Storm Trooper</h3>
                     <img class="character-pic" src="assets/images/image3.png"/>
-                    <h2>Storm Trooper</h2>
+                    <h4>150</h4>
                 </div>
             </div>
+            <!-- Princess Leia -->
             <div class="col-sm-12 col-md-6 col-xl-3">
-                <div class="card card-2 my-3">
+                <div type="button" class="card char4 my-3">
+                    <h3>Princess Leia</h3>
                     <img class="character-pic" src="assets/images/image4.png"/>
-                    <h2>Princess Leia</h2>
+                    <h4>200</h4>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Battlefield -->
+    <div class="container-fluid battlefieldContainer">
+        <div class="row battlefieldRow">
+            <div class="col-12 battlefieldCol">
+                <h2>BATTLEFIELD</h2>
+            </div>
+        </div>
+        
+        <!-- Your character -->
+        <div class="row yourCharContainer">
+            <div class="col-sm-12 col-md-6 col-xl-3 yourChar">
+                <h3>Your Character:</h3>
+            </div>
+        </div>
 
+        <!-- Attack Button -->
+        <button type="button" class="attackButton">ATTACK</button>
+
+        <!-- Your Opponent -->
+        <div class="row yourOpponentContainer">
+            <div class="col-sm-12 col-md-6 col-xl-3 yourOpponent">
+                <h3>Your Opponent:</h3>
+            </div>
+        </div>
+
+        <!-- Reset Button -->
+        <button type="button" class="resetButton">RESET</button>
+    </div>
+    
 </body>
+
+<!-- Links Javascript -->
+<script type="text/javascript" src="./assets/javascript/game.js"></script>
+<!-- Links jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </html>

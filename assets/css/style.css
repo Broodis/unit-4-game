@@ -34,3 +34,10 @@
     background-color: #578395;
     text-align: center;
 }
+
+.battlefieldContainer {
+    padding: 2%;
+    background-color: #578395;
+    color: white;
+    text-align: center;
+}
