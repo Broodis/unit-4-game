@@ -7,6 +7,7 @@ $(document).ready(function () {
 	var trooperCount = 0;
 	var princessCount = 0;
 	var gameNotReady = true;
+
 // Character Selection
 
 	$(".char1").on("click", function () {
@@ -105,45 +106,56 @@ $(document).ready(function () {
 			attackerDamage = attackerDamage * 2;
 			var newAttackerDamage = $('.attacker').attr('attack', attackerDamage);
 
+			var audioElement = document.createElement("audio");
+        	audioElement.setAttribute("src", "assets/audio/saber.mp3");
+			audioElement.play();
+
 			if (attackerHealthAfterClick <= 0) {
 				$("#attackAlert").text("You have been defeated...Reset the game and try again!").css({'margin':'auto', 'color':'black',});
 				$(".attacker").remove();
 				this.disabled = true;
-			}
+			} 
 			else if (defenderHealthAfterClick <= 0) {
 
 				if ($(".defender.char1").attr("health") <= 0) {
-					$("#attackAlert").text("You have defeated Chewbacca, choose another character to attack.").css({'margin':'auto', 'color':'black',});
 					$(".defender.char1").remove();
+					$("#attackAlert").text("You have defeated Chewbacca, choose another character to attack.").css({'margin':'auto', 'color':'black',});
 					console.log(true);
-					winduCount--;
+					maceCount--;
 					princessCount--;
 					trooperCount--;
 					opponentsDefeated++;
 				}
 				else if ($(".defender.char2").attr("health") <= 0) {
-					$("#attackAlert").text("You have defeated Mace Windu, choose another character to attack.").css({'margin':'auto', 'color':'black',});
 					$(".defender.char2").remove();
+					$("#attackAlert").text("You have defeated Mace Windu, choose another character to attack.").css({'margin':'auto', 'color':'black',});
+					console.log(true);
 					chewyCount--;
 					princessCount--;
 					trooperCount--;
 					opponentsDefeated++;
 				}
 				else if ($(".defender.char3").attr("health") <= 0) {
-					$("#attackAlert").text("You have defeated Storm Trooper, choose another character to attack.").css({'margin':'auto', 'color':'black',});
 					$(".defender.char3").remove();
+					$("#attackAlert").text("You have defeated Storm Trooper, choose another character to attack.").css({'margin':'auto', 'color':'black',});
+					console.log(true);
 					chewyCount--;
 					princessCount--;
 					maceCount--;
 					opponentsDefeated++;
 				}
 				else if ($(".defender.char4").attr("health") <= 0) {
-					$("#attackAlert").text("You have defeated Princess Leia, choose another character to attack.").css({'margin':'auto', 'color':'black',});
 					$(".defender.char4").remove();
+					$("#attackAlert").text("You have defeated Princess Leia, choose another character to attack.").css({'margin':'auto', 'color':'black',});
+					console.log(true);
 					chewyCount--;
 					maceCount--;
 					trooperCount--;
 					opponentsDefeated++;
+				}
+				if (opponentsDefeated === 3) {
+					$("#attackAlert").text("YOU WON!!!").css({'margin':'auto', 'color':'black',});
+					this.disabled = true;
 				}
 			}
 		}
